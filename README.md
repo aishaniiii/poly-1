@@ -3,7 +3,7 @@
 
 ## NFT Collection Deployment and Management
 
-This repository contains scripts and contracts to create and manage an NFT (Non-Fungible Token) collection using DALLE 2 or Midjourney, store the items on IPFS via Pinata.cloud, deploy on the Goerli Ethereum Testnet (ERC721 or ERC1155), and optionally map the collection using the Polygon network token mapper.
+This repository contains scripts and contracts to create and manage an NFT (Non-Fungible Token) collection using DALLE 2 or Midjourney, store the items on IPFS via Pinata.cloud, deploy on the sepolia Ethereum Testnet (ERC721 or ERC1155), and optionally map the collection using the Polygon network token mapper.
 
 ## Requirements
 
@@ -39,14 +39,14 @@ This repository contains scripts and contracts to create and manage an NFT (Non-
    POLYGON_PRIVATE_KEY=your_polygon_private_key (if applicable)
    ```
 
-   Ensure you have Ethereum and Polygon (Mumbai) testnet RPC URLs configured in your Hardhat config (`hardhat.config.js`).
+   Ensure you have Ethereum and Polygon (amoy) testnet RPC URLs configured in your Hardhat config (`hardhat.config.js`).
 
 4. **Deploy Contracts**
 
-   Deploy the ERC721 or ERC1155 contract to the Goerli Ethereum Testnet:
+   Deploy the ERC721 or ERC1155 contract to the sepolia Ethereum Testnet:
 
    ```bash
-   npx hardhat run scripts/deploy.js --network goerli
+   npx hardhat run scripts/deploy.js --network sepolia
    ```
 
    Note down the deployed contract address.
@@ -56,7 +56,7 @@ This repository contains scripts and contracts to create and manage an NFT (Non-
    Run the Hardhat script to batch mint all NFTs:
 
    ```bash
-   npx hardhat run scripts/mint.js --network goerli
+   npx hardhat run scripts/mint.js --network sepolia
    ```
 
 6. **Map Collection (Optional)**
@@ -65,9 +65,9 @@ This repository contains scripts and contracts to create and manage an NFT (Non-
 
    [Polygon Token Mapper](https://mapper.matic.today/)
 
-7. **Batch Transfer to Polygon Mumbai**
+7. **Batch Transfer to Polygon amoy**
 
-   Write a Hardhat script to batch transfer all NFTs from Ethereum to Polygon Mumbai using the FxPortal Bridge. First, approve the NFTs to be transferred and then deposit them to the bridge.
+   Write a Hardhat script to batch transfer all NFTs from Ethereum to Polygon amoy using the FxPortal Bridge. First, approve the NFTs to be transferred and then deposit them to the bridge.
 
    Example scripts can be found in `scripts/transferToPolygon.js`.
 
