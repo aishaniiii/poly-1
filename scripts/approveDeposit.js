@@ -2,8 +2,8 @@ const hre = require("hardhat");
 const fxRootContractABI = require("../fxRootContractABI.json");
 const tokenContractJSON = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
 
-const tokenAddress = "0x57AAbbF52711a743545Eb5375038133a23ce729b";// update
-const FxERC721RootTunnel = "0xF9bc4a80464E48369303196645e876c8C7D972de";
+const tokenAddress = "0xE5fF349411F6284d445BA92d1e461CE74312E022";// update
+const FxERC721RootTunnel = "0x9E688939Cb5d484e401933D850207D6750852053";
 const walletAddress = "0x0D53f8320766e9384846Da681dbd51db9D1Ef228";
 
 async function main() {
